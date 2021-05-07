@@ -18,7 +18,7 @@ poly = load(open('poly.pkl','rb'))
 sc = load(open('scaler.pkl','rb'))
 
 
-@app.route('/')
+@app.route('/',methods = ['GET'])
 
 
 def home():
@@ -27,7 +27,7 @@ def home():
 
 
 
-@app.route('/predict',methods = ['POST'])
+@app.route('/predict',methods = ['GET'])
 def predict():
  
     int_feature = [float(x)  for x in request.form.values()] 
