@@ -27,7 +27,7 @@ def home():
 
 
 
-@app.route('/predict',methods = ['GET'])
+@app.route('/predict',methods = ['POST'])
 def predict():
  
     int_feature = [float(x)  for x in request.form.values()] 
